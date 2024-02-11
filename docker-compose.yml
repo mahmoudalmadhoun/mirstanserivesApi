@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node-app:
+   image : mahmoud899/personalbackend:tagname
+   container_name: personal_Backend_AB
+   build:
+    context: .
+    dockerfile: Dockerfile
+   ports:
+   - "4014:4014"
+   environment:
+   - DOCKER_DEFAULT_PLATFORM=linux/amd64
+   - PORT=4014
